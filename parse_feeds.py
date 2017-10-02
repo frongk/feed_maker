@@ -23,8 +23,6 @@ def feed_gen(json_file_output):
     for url in url_list:
         d = feedparser.parse(url)
     
-        print url
-        
         feed_hold[d.feed.title]=[]
         for entry in d.entries[0:5]:
             dt = entry['published_parsed']  
